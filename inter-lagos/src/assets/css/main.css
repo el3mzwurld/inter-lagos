@@ -232,6 +232,184 @@ header {
         .card {
           background: #efecece6;
           border-radius: 8px;
+          display: grid;
+          grid-row: auto;
+
+          .card--match--info {
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: "work sans", sans-serif;
+
+            .teams {
+              font-family: "work sans", sans-serif;
+              color: var(--main);
+              font-size: 25px;
+              font-weight: 600;
+            }
+            span {
+              font-family: "work sans", sans-serif;
+              color: var(--main);
+              font-size: 20px;
+              font-weight: 600;
+            }
+          }
+          .card--scoreline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              font-family: "oswald", sans-serif;
+              color: var(--main);
+              font-size: 50px;
+              font-weight: 600;
+
+              span {
+                color: var(--aux--light);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .club--info {
+    width: 100%;
+    height: 1100px;
+    /* background-color: white;
+    opacity: 0.4; */
+    margin-bottom: 10px;
+    .club--info--container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: gray;
+      .title {
+        font-family: "oswald", sans-serif;
+        font-size: 35px;
+        color: var(--aux);
+        font-weight: 600;
+        padding-top: 5px;
+        padding-left: 12px;
+      }
+
+      .table {
+        width: 100%;
+        height: 350px;
+        background-color: white;
+        color: black;
+        border-radius: 8px;
+
+        .league--table {
+          width: 100%;
+          height: 100%;
+          padding: 0px 5px;
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+
+          .header {
+            width: 100%;
+            height: 40px;
+
+            .table--row {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              padding-top: 5px;
+              padding: 5px;
+              .table--cell {
+                width: 35px;
+                height: 100%;
+                font-family: "oswald", sans-serif;
+                font-size: 20px;
+              }
+              .table--cell:nth-child(2) {
+                flex: 1;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+              }
+            }
+          }
+          .body {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 0px 5px;
+
+            .table--row {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+              width: 100%;
+              height: 50px;
+              margin: 5px 0px;
+              .table--cell {
+                width: 35px;
+                height: 100%;
+                font-family: "oswald", sans-serif;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */
+              }
+              .table--cell:nth-child(2) {
+                flex: 1;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+
+      .shop--partners {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .shop--portal {
+          width: 100%;
+          height: 500px;
+          background-color: #051c2a;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .shop--container {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            background: url("../images/kit.png");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+
+            p {
+              /* position: absolute;
+              font-family: "oswald", sans-serif;
+              width: 80%;
+              font-size: 20px;
+              color: var(--aux);
+              bottom: 20%; */
+            }
+          }
         }
       }
     }
