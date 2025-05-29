@@ -3,6 +3,8 @@
 import ClubInfo from "./body-sections/club-info";
 import FixtureContainer from "./body-sections/fixtures";
 import HeadlineSection from "./body-sections/headlines";
+import Membership from "./body-sections/membership";
+import Socials from "./body-sections/socials";
 
 function Content() {
   return (
@@ -16,7 +18,12 @@ function Content() {
       <section className="club--info">
         <ClubInfo />
       </section>
-      <section className="players"></section>
+      <section className="socials">
+        <Socials />
+      </section>
+      <div className="membership">
+        <Membership></Membership>
+      </div>
     </main>
   );
 }

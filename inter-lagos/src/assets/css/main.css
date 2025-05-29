@@ -60,9 +60,12 @@ header {
     align-items: center;
 
     .anim--txt {
+      svg path:nth-child(1) {
+        animation: fill 2.5s ease-in-out forwards;
+      }
       svg path:nth-child(2) {
         fill: transparent;
-        stroke: var(--aux);
+
         stroke-width: 1.5px;
         transition: 0.5s ease-in-out;
         stroke-dasharray: 500;
@@ -70,6 +73,7 @@ header {
         animation: svg 2.5s ease-in-out forwards;
         animation-delay: 1.5s;
         animation-iteration-count: 1;
+        /* animation: fill 2.5s ease-in-out forwards; */
       }
     }
   }
@@ -78,26 +82,64 @@ header {
 @keyframes svg {
   0% {
     stroke-dashoffset: 500;
+    stroke: var(--aux);
+    stroke-width: 2.5;
   }
   25% {
     stroke-dashoffset: 450;
+    stroke-width: 2.5;
   }
   50% {
     stroke-dashoffset: 300;
+    stroke: var(--aux);
+    stroke-width: 2.5;
   }
   75% {
     stroke-dashoffset: 400;
+    stroke: var(--aux);
+    stroke-width: 2.5;
   }
   80% {
     stroke-dashoffset: 100;
     opacity: 0.5;
+    stroke: white;
+    stroke-width: 2.5;
   }
   95% {
     stroke-dashoffset: 0;
-    opacity: 0;
+    opacity: 1;
+    stroke: var(--aux);
+    stroke-width: 2.5;
   }
   100% {
+    animation-delay: 2.5s;
     stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: transparent;
+    stroke-width: 2.5;
+    fill: var(--aux--light);
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  50% {
+    fill: transparent;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  75% {
+    fill: white;
+    transform: translateY(-5%);
+    opacity: 1;
+  }
+
+  to {
+    fill: white;
+    transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -135,11 +177,14 @@ header {
   .header--anim {
     .anim--txt {
       width: 100%;
+      height: auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      .svg {
+
+      svg {
         width: 80%;
+        display: flex;
       }
     }
   }
@@ -212,9 +257,9 @@ header {
       .title {
         position: absolute;
         font-family: "Oswald", sans-serif;
-        font-size: 30px;
-        top: 5%;
-        left: 5%;
+        font-size: 35px;
+        padding-top: 5px;
+        padding-left: 12px;
         font-weight: 500;
         color: var(--aux);
       }
@@ -230,7 +275,7 @@ header {
         row-gap: 20px;
 
         .card {
-          background: #efecece6;
+          background: white;
           border-radius: 8px;
           display: grid;
           grid-row: auto;
@@ -279,12 +324,13 @@ header {
     height: 1430px;
     /* background-color: white;
     opacity: 0.4; */
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     .club--info--container {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
+
       gap: 20px;
       background: none;
       .title {
@@ -412,13 +458,19 @@ header {
               bottom: 20%;
               right: 0%;
               text-align: center;
+              font-weight: 600;
             }
+          }
+          .shop--container:hover {
+            background: url("../images/away.png");
+            background-position: right;
+            background-size: cover;
           }
         }
 
         .partners {
-          width: 100%;
           flex: 1;
+          width: 100%;
           height: 100%;
           background: none;
           display: flex;
@@ -434,6 +486,11 @@ header {
             background: white;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+            }
           }
           .seon--sports {
             width: 250px;
@@ -445,24 +502,22 @@ header {
             background: white;
             border-top-left-radius: 50px;
             border-bottom-left-radius: 50px;
-
-            img {
-              position: absolute;
-              right: 5%;
-              top: 10%;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .button {
             position: absolute;
             bottom: 5%;
-            right: 5%;
+            right: 0%;
             width: 250px;
 
             button {
               width: 100%;
+              height: 100%;
               background: transparent;
-              font-family: "Oswald", sans-serif;
+              font-family: "poppins", sans-serif;
               font-size: 25px;
               display: flex;
               justify-content: flex-end;
@@ -472,9 +527,10 @@ header {
               border: none;
 
               span {
-                height: 15px;
+                height: 20px;
+                margin-left: 5px;
                 width: auto;
-                color: var(--aux);
+                color: white;
               }
             }
             button:active {
@@ -483,6 +539,124 @@ header {
           }
         }
       }
+    }
+  }
+  .socials {
+    width: 100%;
+    height: 350px;
+    background-color: none;
+    margin-bottom: 25px;
+    .social--links {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 100px;
+      position: relative;
+
+      .title {
+        height: 40px;
+        font-family: "Oswald", sans-serif;
+        margin-top: 0px;
+        padding-top: 5px;
+        padding-left: 12px;
+        color: var(--aux);
+        font-size: 35px;
+        font-weight: 600;
+      }
+      .links--tray {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 30px;
+
+        .link {
+          list-style: none;
+
+          img {
+            width: 40px;
+          }
+          img:hover {
+            scale: 1.3;
+            transition: 0.8s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .membership {
+    width: 100%;
+    height: 510px;
+    background-color: none;
+    margin-bottom: 12.5px;
+
+    .join--container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .title {
+        height: 40px;
+        font-family: "Oswald", sans-serif;
+        margin-top: 0px;
+
+        padding-left: 12px;
+        color: var(--aux);
+        font-size: 35px;
+        font-weight: 600;
+      }
+
+      .membership--portal {
+        flex: 1;
+        width: 100%;
+        height: 95%;
+        background-image: url("../images/shanks.jpg");
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        border-radius: 12px;
+
+        .button {
+          width: 250px;
+          height: 50px;
+          background: none;
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
+
+          button {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            font-family: "poppins", sans-serif;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #051c2a;
+            color: #f075be;
+          }
+          button:hover {
+            color: white;
+            transition: 0.5s ease-in-out;
+            scale: (0.9);
+          }
+          button:active {
+            border: none;
+          }
+        }
+      }
+    }
+    .membership--portal:hover,
+    :active {
+      scale: 1;
+      border: none;
     }
   }
 }
