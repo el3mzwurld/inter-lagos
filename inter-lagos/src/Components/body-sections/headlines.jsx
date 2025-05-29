@@ -6,7 +6,11 @@ function HeadlineSection() {
         <div className="controller"></div>
       </div>
 
-      <div className="upcoming--game"></div>
+      <div className="upcoming--game">
+        <div className="button">
+          <button>Purchase Ticket</button>
+        </div>
+      </div>
     </div>
   );
 }
