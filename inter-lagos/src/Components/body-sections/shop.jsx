@@ -1,8 +1,3 @@
-const shop = document.querySelector(".shop--container");
-shop.addEventListener("click", () => {
-  location.href = "https://linktr.ee/inter_lagos";
-});
-
 function Shop() {
   return (
     <div className="shop--portal">

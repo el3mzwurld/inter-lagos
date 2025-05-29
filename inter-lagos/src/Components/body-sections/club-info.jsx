@@ -1,3 +1,4 @@
+import Partners from "./partners";
 import Shop from "./shop";
 import Table from "./table";
 
@@ -14,6 +15,7 @@ function ClubInfo() {
 
       <div className="shop--partners">
         <Shop></Shop>
+        <Partners></Partners>
       </div>
     </div>
   );

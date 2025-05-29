@@ -276,7 +276,7 @@ header {
   }
   .club--info {
     width: 100%;
-    height: 1100px;
+    height: 1430px;
     /* background-color: white;
     opacity: 0.4; */
     margin-bottom: 10px;
@@ -286,7 +286,7 @@ header {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      background: gray;
+      background: none;
       .title {
         font-family: "oswald", sans-serif;
         font-size: 35px;
@@ -392,6 +392,7 @@ header {
           display: flex;
           flex-direction: column;
           gap: 15px;
+
           .shop--container {
             flex: 1;
             width: 100%;
@@ -400,14 +401,84 @@ header {
             background-position: center;
             background-size: cover;
             position: relative;
-
+            border-radius: 12px;
+            margin-bottom: 10px;
             p {
-              /* position: absolute;
+              position: absolute;
               font-family: "oswald", sans-serif;
               width: 80%;
-              font-size: 20px;
-              color: var(--aux);
-              bottom: 20%; */
+              font-size: 25px;
+              color: white;
+              bottom: 20%;
+              right: 0%;
+              text-align: center;
+            }
+          }
+        }
+
+        .partners {
+          width: 100%;
+          flex: 1;
+          height: 100%;
+          background: none;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+
+          .lotus {
+            width: 250px;
+            height: auto;
+            position: absolute;
+            top: 30%;
+            padding-left: 25px;
+            background: white;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+          }
+          .seon--sports {
+            width: 250px;
+            height: 77.3px;
+            position: absolute;
+            top: 55%;
+            right: 0%;
+            padding-left: 25px;
+            background: white;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+
+            img {
+              position: absolute;
+              right: 5%;
+              top: 10%;
+            }
+          }
+
+          .button {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            width: 250px;
+
+            button {
+              width: 100%;
+              background: transparent;
+              font-family: "Oswald", sans-serif;
+              font-size: 25px;
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              color: var(--aux--light);
+              cursor: pointer;
+              border: none;
+
+              span {
+                height: 15px;
+                width: auto;
+                color: var(--aux);
+              }
+            }
+            button:active {
+              border: none;
             }
           }
         }
